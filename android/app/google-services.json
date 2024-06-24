@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "606570212220",
+    "project_id": "eco-taxi-425416",
+    "storage_bucket": "eco-taxi-425416.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606570212220:android:eb122275a78e87fdac12f9",
+        "android_client_info": {
+          "package_name": "com.economy.captain_eco"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa6v_wIzK3kAmRre7RIahqzITHJ9h5k-k"
+        },
+        {
+          "current_key": "AIzaSyCOsbjSAL0-NQsFx8kO8yzyPuNSBrATPAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606570212220:android:84e02345484443c8ac12f9",
+        "android_client_info": {
+          "package_name": "com.economy.ecotaxi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa6v_wIzK3kAmRre7RIahqzITHJ9h5k-k"
+        },
+        {
+          "current_key": "AIzaSyCOsbjSAL0-NQsFx8kO8yzyPuNSBrATPAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,8 @@
+{
+    "dart.lineLength": 200, // This sets the maximum line length for Dart code to 200 characters.
+    "[dart]": { // This applies the following settings only to Dart files.
+        "editor.rulers": [ // This sets vertical rulers for the editor.
+            200 // This sets a ruler at the 200th character.
+        ]
+    }
+}
