@@ -25,8 +25,7 @@ platform :android do
         debug: false,
         app: "1:606570212220:android:eb122275a78e87fdac12f9",
         # to secure secret locally without github actions use pkg "flutter_dotenv"
-        firebase_cli_token: "1//03hxXjbEXzLdXCgYIARAAGAMSNwF-L9IrQjg-LCFn-OQmkz2VIg90AaZO3E3FGqUlNo7lh2UTZaaqmH4KT_Ow5XpTj7gGjSH9FyY",
-#         firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
+        firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
         android_artifact_type: "APK",
         android_artifact_path: "../build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk",
         groups: "me",
