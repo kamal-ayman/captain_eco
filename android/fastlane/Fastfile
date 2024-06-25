@@ -18,14 +18,15 @@ default_platform(:android)
 platform :android do
   desc "Lane for android firebase app distribution"
   lane :firebase_distribution do
-    sh 'flutter pub get'
-    sh 'flutter pub run flutter_launcher_icons'
-    sh 'flutter build apk --release --split-per-abi --target-platform=android-arm --no-tree-shake-icons --flavor prod -t lib/main_prod.dart --no-tree-shake-icons'
+#     sh 'flutter pub get'
+#     sh 'flutter pub run flutter_launcher_icons'
+#     sh 'flutter build apk --release --split-per-abi --target-platform=android-arm --no-tree-shake-icons --flavor prod -t lib/main_prod.dart --no-tree-shake-icons'
     firebase_app_distribution(
         debug: false,
         app: "1:606570212220:android:eb122275a78e87fdac12f9",
         # to secure secret locally without github actions use pkg "flutter_dotenv"
-        firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
+#         firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
+        firebase_cli_token: "1//03hxXjbEXzLdXCgYIARAAGAMSNwF-L9IrQjg-LCFn-OQmkz2VIg90AaZO3E3FGqUlNo7lh2UTZaaqmH4KT_Ow5XpTj7gGjSH9FyY",
         android_artifact_type: "APK",
         android_artifact_path: "../build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk",
         groups: "me",
