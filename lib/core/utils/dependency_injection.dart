@@ -10,7 +10,9 @@ import '../translations/appLanguage.dart';
 final sl = GetIt.instance;
 
 class ServicesLocator {
-  void init () {
+  ServicesLocator._();
+
+  static void init () {
     // shared preferences
     sl.registerLazySingleton<MySharedPreferences>(() => MySharedPreferences());
     sl.registerLazySingleton<AppLanguage>(() => AppLanguage());

@@ -3,9 +3,10 @@ import 'package:captain_eco/core/routing/routes.dart';
 import 'package:captain_eco/core/utils/cache_helper.dart';
 
 class InitRoute {
+  InitRoute._();
   static late final String initialRoute;
 
-  Future<void> init() async {
+  static Future<void> init() async {
     /// TODO: ---- start from here ----
     // initialRoute = Routes.loginScreen;
     return;

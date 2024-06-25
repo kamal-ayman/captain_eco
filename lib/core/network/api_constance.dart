@@ -1,6 +1,6 @@
 class ApiConstance {
   static const String baseUrl = 'https://alotaxi.website/api/';
-  static String? token = null;
+  static String? token;
   static const String login = 'users/login';
   static const String logout = 'users/logout';
   static const String verifyCode = 'users/verifyCode';
@@ -8,6 +8,7 @@ class ApiConstance {
   static const String getProfileData = 'users/getProfileData';
   static const String updateProfile = 'users/updateProfile';
   static const String changePassword = 'users/changePassword';
+  static String? deviceToken;
 }
 
 class ApiErrors {
