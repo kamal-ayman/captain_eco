@@ -1,5 +1,8 @@
 import 'package:captain_eco/feauters/authorization/login/view/login_screen.dart';
 import 'package:captain_eco/feauters/authorization/register/view/register_screen.dart';
+import 'package:captain_eco/feauters/authorization/register/view/step1_page_screen.dart';
+import 'package:captain_eco/feauters/authorization/register/view/step2_page_screen.dart';
+import 'package:captain_eco/feauters/home/view/home_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../utils/dependency_injection.dart';
@@ -23,99 +26,28 @@ class AppRouter {
             return RegisterScreen();
           },
         );
+
+      case Routes.homepageScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) {
+            return HomePageScreen();
+          },
+        );
+
+      case Routes.step1PageScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) {
+            return Step1PageScreen();
+          },
+        );
+
+      case Routes.step2PageScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) {
+            return Step2PageScreen();
+          },
+        );
     }
     return null;
   }
 }
-//         return MaterialPageRoute(
-//           builder: (_) =>
-//               BlocProvider(
-//                 create: (context) => LoginCubit(sl()),
-//                 child: LoginScreen(),
-//               ),
-//         );
-//       case Routes.otpScreen:
-//         return MaterialPageRoute(
-//           builder: (_) =>
-//               BlocProvider(
-//                 create: (context) => OtpCubit(sl()),
-//                 child: OtpScreen(otpScreenArgsModel: arguments as OtpScreenArgsModel),
-//               ),
-//         );
-//       case Routes.profileScreen:
-//         return MaterialPageRoute(
-//           builder: (_) =>
-//               BlocProvider(
-//                 create: (context) => ProfileCubit(sl()),
-//                 child: ProfileScreen(canBack: arguments as bool?),
-//               ),
-//         );
-//
-//       case Routes.accountScreen:
-//         return MaterialPageRoute(
-//           builder: (BuildContext context) {
-//             return BlocProvider(
-//               create: (context) => AccountCubit(sl()),
-//               child: AccountScreen(),
-//             );
-//           },
-//         );
-//
-//       case Routes.helpCenterScreen:
-//         return MaterialPageRoute(
-//           builder: (BuildContext context) {
-//             return HelpCenterScreen();
-//           },
-//         );
-//       case Routes.membershipScreen:
-//         return MaterialPageRoute(
-//           builder: (BuildContext context) {
-//             return MembershipScreen();
-//           },
-//         );
-//       case Routes.promotionScreen:
-//         return MaterialPageRoute(
-//           builder: (BuildContext context) {
-//             return PromotionScreen();
-//           },
-//         );
-//       case Routes.savedPlacesScreen:
-//         return MaterialPageRoute(
-//           builder: (BuildContext context) {
-//             return SavedPlacesScreen();
-//           },
-//         );
-//       case Routes.shareFriendsScreen:
-//         return MaterialPageRoute(
-//           builder: (BuildContext context) {
-//             return ShareFriendsScreen();
-//           },
-//         );
-//       case Routes.supportTeamScreen:
-//         return MaterialPageRoute(
-//           builder: (BuildContext context) {
-//             return SupportTeamScreen();
-//           },
-//         );
-//       case Routes.aboutUsScreen:
-//         return MaterialPageRoute(
-//           builder: (BuildContext context) {
-//             return AboutUsScreen();
-//           },
-//         );
-//       case Routes.addNewLocation:
-//         return MaterialPageRoute(
-//           builder: (BuildContext context) {
-//             return AddNewLocationScreen();
-//           },
-//         );
-//
-//       case Routes.wheelSpinScreen:
-//         return MaterialPageRoute(
-//           builder: (BuildContext context) {
-//             return WheelSpinScreen();
-//           },
-//         );
-//
-//       case Routes.homeScreen:
-//         return MaterialPageRoute(builder: (_) => HomeScreen());

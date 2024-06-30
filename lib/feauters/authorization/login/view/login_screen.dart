@@ -8,6 +8,7 @@ import 'package:captain_eco/feauters/authorization/login/logic/login_state.dart'
 import 'package:captain_eco/feauters/authorization/login/view/widgets/phone_password_text_form_widget.dart';
 import 'package:captain_eco/feauters/authorization/login/view/widgets/select_language_widget.dart';
 import 'package:captain_eco/feauters/authorization/login/view/widgets/terms_and_conditions_text.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -47,10 +48,15 @@ class LoginScreen extends StatelessWidget {
                 GestureDetector(
                   onTap: () {},
                   child: Align(
-                      alignment: AppLanguage.languageCode == 'ar' ? Alignment.centerRight : Alignment.centerLeft,
+                      alignment: AppLanguage.languageCode == 'ar'
+                          ? Alignment.centerRight
+                          : Alignment.centerLeft,
                       child: Text(
                         'forget_password'.tr,
-                        style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w500, fontSize: 15.sp),
+                        style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 15.sp),
                       )),
                 ),
                 Gap(30.h),
@@ -64,20 +70,23 @@ class LoginScreen extends StatelessWidget {
                 Gap(20.h),
                 RichText(
                   textAlign: TextAlign.center,
-                  text: TextSpan(style: const TextStyle(height: 1.5), children: [
-                    TextSpan(text: 'You do not have account ?  ', style: TextStyle(color: Colors.black)),
+                  text:
+                      TextSpan(style: const TextStyle(height: 1.5), children: [
                     TextSpan(
-                      text: 'Register Now',
+                        text: 'You do not have account ?  '.tr,
+                        style: TextStyle(color: Colors.black)),
+                    TextSpan(
+                      text: 'Register Now'.tr,
                       style: TextStyle(
                         color: const Color.fromARGB(255, 0, 94, 255),
                       ),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          context.pushReplacementNamed(Routes.registerScreen);
+                        },
                     ),
                   ]),
                 ),
-                Gap(20.h),
-                TextButton(onPressed: () {
-                  context.pushNamed(Routes.registerScreen);
-                }, child: Text('Register')),
                 Gap(100.h),
                 TermsAndConditionsText(),
               ],
