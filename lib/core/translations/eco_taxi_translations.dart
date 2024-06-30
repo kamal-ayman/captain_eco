@@ -6,7 +6,7 @@ part 'languages/ar.dart';
 part 'languages/en.dart';
 part 'languages/ku.dart';
 
-class EcoTaxiTranslations extends Translations {
+class CaptainEcoTranslations extends Translations {
   @override
   Map<String, Map<String, String>> get keys {
     return {

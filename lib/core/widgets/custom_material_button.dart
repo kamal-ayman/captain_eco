@@ -25,7 +25,7 @@ class CustomMaterialButton extends StatelessWidget {
   const CustomMaterialButton({
     super.key,
     this.buttonColor = LightColorsManager.primary,
-    this.textColor = LightColorsManager.white,
+    this.textColor,
     this.borderColor = LightColorsManager.primary,
     this.withBorderColor = false,
     this.fontSize = 13,
@@ -51,12 +51,10 @@ class CustomMaterialButton extends StatelessWidget {
       child: MaterialButton(
         elevation: elevation,
         highlightElevation: elevation,
-        onPressed: (isLoading || isDisable) ? (){} : onTap,
+        onPressed: (isLoading || isDisable) ? () {} : onTap,
         materialTapTargetSize: materialTapTargetSize,
         shape: RoundedRectangleBorder(
-          side: withBorderColor
-              ? BorderSide(color: borderColor)
-              : BorderSide.none,
+          side: withBorderColor ? BorderSide(color: borderColor) : BorderSide.none,
           borderRadius: BorderRadius.circular(borderRadius ?? 16.0),
         ),
         color: !isDisable ? buttonColor : Colors.grey[600],
@@ -64,11 +62,12 @@ class CustomMaterialButton extends StatelessWidget {
             ? Center(
                 child: Transform.translate(
                 offset: const Offset(0, 0),
-                child: widget ??
-                    Text(text!,
-                        style: textStyle ?? TextStyles.white16semiBold),
+                child: widget ?? Text(text!, style: textStyle ?? TextStyles.white16semiBold),
               ))
-            : const Center(child: CircularProgressIndicator(color: LightColorsManager.white,)),
+            : const Center(
+                child: CircularProgressIndicator(
+                color: LightColorsManager.white,
+              )),
       ),
     );
   }

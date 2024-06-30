@@ -84,8 +84,7 @@ flutter_launcher_icons:
 
 flutter:
   uses-material-design: true
-#  assets:
-#    - assets/splash/
-#    - assets/app_icon/
-#    - assets/images/
-#    - assets/images/map/
+  assets:
+    - assets/app_icon/
+    - assets/images/
+

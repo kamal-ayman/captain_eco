@@ -1,3 +1,5 @@
+import 'package:captain_eco/feauters/authorization/login/view/login_screen.dart';
+import 'package:captain_eco/feauters/authorization/register/view/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../utils/dependency_injection.dart';
@@ -9,15 +11,22 @@ class AppRouter {
 
     switch (settings.name) {
       case Routes.loginScreen:
-        // return MaterialPageRoute(
-        //   builder: (_) => LoginScreen()
-        // );
+        return MaterialPageRoute(
+          builder: (BuildContext context) {
+            return LoginScreen();
+          },
+        );
+
+      case Routes.registerScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) {
+            return RegisterScreen();
+          },
+        );
     }
     return null;
   }
 }
-
-// case Routes.loginScreen:
 //         return MaterialPageRoute(
 //           builder: (_) =>
 //               BlocProvider(
