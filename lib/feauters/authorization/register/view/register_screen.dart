@@ -121,7 +121,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 segments.removeLast();
                                 setState(() {
                                   currentStep = 'Step 1/2'.tr;
-                                });
+                                }); 
                               }, 
                         label: Row(
                           children: [
