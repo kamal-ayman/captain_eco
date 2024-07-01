@@ -38,7 +38,6 @@ class CustomTextFormField extends StatefulWidget {
   final List<TextInputFormatter>? inputFormatters;
   final EdgeInsets contentPadding;
 
-
   const CustomTextFormField({
     super.key,
     required this.controller,
@@ -102,8 +101,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   Widget build(BuildContext context) {
     return Theme(
       data: ThemeData().copyWith(
-        colorScheme:
-            ThemeData().colorScheme.copyWith(primary: LightColorsManager.primary),
+        colorScheme: ThemeData()
+            .colorScheme
+            .copyWith(primary: LightColorsManager.primary),
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: widget.padding),
@@ -115,12 +115,12 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             borderRadius: BorderRadius.circular(widget.focusedBorderRadius),
             child: TextFormField(
               cursorHeight: 25,
-              
               cursorWidth: 2,
               enableInteractiveSelection: true,
               inputFormatters: widget.inputFormatters,
               onEditingComplete: widget.onEditingComplete,
-              textDirection: widget.textDirection ?? AppLanguage.currentTextDirection,
+              textDirection:
+                  widget.textDirection ?? AppLanguage.currentTextDirection,
               textCapitalization: widget.textCapitalization,
               maxLength: widget.maxLength,
               controller: widget.controller,
@@ -135,7 +135,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
               autocorrect: false,
               maxLines: widget.maxLines,
               focusNode: _focusNode,
-              style: TextStyles.black14medium,
+              style: TextStyles.gery11regular,
               decoration: InputDecoration(
                 isDense: true,
                 filled: true,
@@ -143,16 +143,23 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                 contentPadding: widget.contentPadding,
                 labelText: widget.labelText,
                 hintText: widget.hintText,
-                hintStyle: TextStyles.black45_16regular,
+                hintStyle: TextStyles.black45_16medium,
                 alignLabelWithHint: true,
-                suffixIconColor: _isFocused ? widget.suffixIconColor : LightColorsManager.grey,
+                suffixIconColor: _isFocused
+                    ? widget.suffixIconColor
+                    : LightColorsManager.grey,
                 labelStyle: TextStyles.light1Grey14medium,
-                prefixIcon: widget.prefixIcon != null || widget.prefixWidget != null ? Builder(builder: (context) {
-                  if (widget.prefixIcon != null) {
-                    return Icon(widget.prefixIcon);
-                  }
-                  return widget.prefixWidget!;
-                },): null,
+                prefixIcon:
+                    widget.prefixIcon != null || widget.prefixWidget != null
+                        ? Builder(
+                            builder: (context) {
+                              if (widget.prefixIcon != null) {
+                                return Icon(widget.prefixIcon);
+                              }
+                              return widget.prefixWidget!;
+                            },
+                          )
+                        : null,
                 suffixIcon: widget.suffixIcon == null
                     ? null
                     : IconButton(
@@ -161,36 +168,43 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                         icon: Icon(widget.suffixIcon),
                       ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(widget.unFocusedBorderRadius),
-                  borderSide:
-                      const BorderSide(color: LightColorsManager.lightGrey, width: 1.3),
+                  borderRadius:
+                      BorderRadius.circular(widget.unFocusedBorderRadius),
+                  borderSide: const BorderSide(
+                      color: LightColorsManager.lightGrey, width: 1.3),
                 ),
                 disabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(widget.unFocusedBorderRadius),
-                  borderSide:
-                      const BorderSide(color: LightColorsManager.lightGrey, width: 1.3),
+                  borderRadius:
+                      BorderRadius.circular(widget.unFocusedBorderRadius),
+                  borderSide: const BorderSide(
+                      color: LightColorsManager.lightGrey, width: 1.3),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(widget.focusedBorderRadius),
-                  borderSide: BorderSide(color: widget.focusedBorderColor, width: 1.3),
+                  borderRadius:
+                      BorderRadius.circular(widget.focusedBorderRadius),
+                  borderSide:
+                      BorderSide(color: widget.focusedBorderColor, width: 1.3),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(widget.unFocusedBorderRadius),
-                  borderSide:
-                      const BorderSide(color: LightColorsManager.lightGrey, width: 1.3),
+                  borderRadius:
+                      BorderRadius.circular(widget.unFocusedBorderRadius),
+                  borderSide: const BorderSide(
+                      color: LightColorsManager.lightGrey, width: 1.3),
                 ),
                 errorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(widget.unFocusedBorderRadius),
-                  borderSide:
-                      const BorderSide(color: LightColorsManager.red, width: 1.3),
+                  borderRadius:
+                      BorderRadius.circular(widget.unFocusedBorderRadius),
+                  borderSide: const BorderSide(
+                      color: LightColorsManager.red, width: 1.3),
                 ),
                 errorStyle: context.textTheme.bodyMedium!.copyWith(
                   color: LightColorsManager.black,
                 ),
                 focusedErrorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(widget.focusedBorderRadius),
-                  borderSide:
-                      const BorderSide(color: LightColorsManager.red2, width: 1.3),
+                  borderRadius:
+                      BorderRadius.circular(widget.focusedBorderRadius),
+                  borderSide: const BorderSide(
+                      color: LightColorsManager.red2, width: 1.3),
                 ),
               ),
             ),

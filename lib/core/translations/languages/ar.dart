@@ -12,7 +12,8 @@ const _ar = <String, String>{
   'incorrect_phone_number': 'رقم الهاتف غير صحيح',
   'incorrect_password': 'كلمة المرور غير صحيحة',
   'otp': 'كود التحقق',
-  'enter_the_5_digit_code_sent_to_you_at': 'أدخل الرمز المكون من 5 أرقام الذي تم إرساله إليك على',
+  'enter_the_5_digit_code_sent_to_you_at':
+      'أدخل الرمز المكون من 5 أرقام الذي تم إرساله إليك على',
   'resend_code': 'إعادة إرسال الرمز',
   'verify': 'تحقق',
   'incorrect_otp': 'رمز التحقق غير صحيح',
@@ -29,7 +30,7 @@ const _ar = <String, String>{
   'do_you_want_to_change_the_password': 'هل تريد تغيير كلمة المرور؟',
   'yes': 'نعم',
   'no': 'لا',
-  'back': 'رجوع',
+  'back': 'السابق',
   'change_password': 'تغيير كلمة المرور',
   'gender': 'الجنس',
   'birthday': 'تاريخ الميلاد',
@@ -53,7 +54,8 @@ const _ar = <String, String>{
   'logout': 'تسجيل الخروج',
   'saved_places': 'الأماكن المحفوظة',
   'password_do_not_match': 'كلمات المرور غير متطابقة',
-  'password_must_be_at_least_6_characters': 'يجب أن تكون كلمة المرور على الأقل 6 أحرف',
+  'password_must_be_at_least_6_characters':
+      'يجب أن تكون كلمة المرور على الأقل 6 أحرف',
   'error': 'خطأ',
   'success': 'نجاح',
   'warning': 'تحذير',
@@ -63,9 +65,25 @@ const _ar = <String, String>{
   'location_address': 'العنوان',
   'male': 'ذكر',
   'female': 'أنثى',
-  // spin_and_win
-  'spin_and_win' :'الدوران والفوز'
-  // Spin And Win
-
-  // password do not match
+  'done': 'تـم',
+  'next': 'التالي',
+  'spin_and_win': 'الدوران والفوز',
+  'create new account': 'إنشاء حساب جديد',
+  'Step 1/2': 'خطوة 1/2',
+  'Step 2/2': 'خطوة 2/2',
+  'Enter your name': 'أدخل اسمك',
+  'Enter your email': 'أدخل بريدك الالكتروني',
+  'Register Now': 'سجل الان',
+  'Login' : 'تسجيل الدخول',
+  'You do not have account ?  ' : '  ليس لديك حساب ؟  ',
+  'name' : 'الاسم',
+'phone number' : 'رقم الهاتف',
+'car model' : 'موديل السيارة',
+'city' : 'المدينة',
+  'confirm password' : 'تاكيد كلمة المرور',
+  'create account' : 'انشاء حساب',
+  'or' : 'او',
+  'Enter your phone' : 'أدخل رقم الهاتف',
+  'Select your car' : 'اختر موديل السيارة',
+  'Select your city' : 'اختر مدينتك',
 };

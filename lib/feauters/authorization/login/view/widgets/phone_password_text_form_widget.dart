@@ -12,13 +12,14 @@ class PhonePasswordTextFormWidget extends StatefulWidget {
   const PhonePasswordTextFormWidget({super.key});
 
   @override
-  State<PhonePasswordTextFormWidget> createState() => _PhonePasswordTextFormWidgetState();
+  State<PhonePasswordTextFormWidget> createState() =>
+      _PhonePasswordTextFormWidgetState();
 }
 
-class _PhonePasswordTextFormWidgetState extends State<PhonePasswordTextFormWidget> {
-   final TextEditingController passwordController = TextEditingController();
-   final TextEditingController phoneController = TextEditingController();
-
+class _PhonePasswordTextFormWidgetState
+    extends State<PhonePasswordTextFormWidget> {
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
 
   bool obscureText = true;
 
@@ -46,7 +47,8 @@ class _PhonePasswordTextFormWidgetState extends State<PhonePasswordTextFormWidge
       setState(() {
         hasLowerCase = AppRegex.hasLowerCase(passwordController.text);
         hasUpperCase = AppRegex.hasUpperCase(passwordController.text);
-        hasSpecialCharacters = AppRegex.hasSpecialCharacter(passwordController.text);
+        hasSpecialCharacters =
+            AppRegex.hasSpecialCharacter(passwordController.text);
         hasNumber = AppRegex.hasNumber(passwordController.text);
         hasMinLength = AppRegex.hasMinLength(passwordController.text);
       });
@@ -83,8 +85,8 @@ class _PhonePasswordTextFormWidgetState extends State<PhonePasswordTextFormWidge
                 hintText: 'xxxxxx',
                 controller: phoneController,
                 validator: (value) {
-                  // ignore: dead_code
-                  if ((value == null || value.isEmpty || value.length != 10) && false) {
+                  if ((value == null || value.isEmpty || value.length != 10) &&
+                      false) {
                     return 'incorrect phone number'.tr;
                   }
                   return null;
@@ -97,14 +99,15 @@ class _PhonePasswordTextFormWidgetState extends State<PhonePasswordTextFormWidge
                 controller: passwordController,
                 // hintText: 'كلمة السر',
                 prefixWidget: Padding(
-                  padding: EdgeInsets.fromLTRB(15.0, 10.h, 18.h, 0.0),
+                  padding: EdgeInsets.fromLTRB(15.0, 15.h, 18.h, 0.0),
                   child: Text(
                     'password'.tr,
                     style: TextStyles.grey14regular,
                   ),
                 ),
                 obscureText: obscureText,
-                suffixIcon: obscureText ? Icons.visibility_off : Icons.visibility,
+                suffixIcon:
+                    obscureText ? Icons.visibility_off : Icons.visibility,
                 suffixIconOnPressed: () {
                   setState(() {
                     obscureText = !obscureText;
