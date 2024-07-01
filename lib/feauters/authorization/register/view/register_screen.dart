@@ -122,7 +122,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 setState(() {
                                   currentStep = 'Step 1/2'.tr;
                                 });
-                              },
+                              }, 
                         label: Row(
                           children: [
                             Icon(Icons.arrow_back),
