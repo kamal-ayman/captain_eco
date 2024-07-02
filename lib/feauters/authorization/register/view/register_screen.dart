@@ -22,7 +22,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   TextEditingController _name = TextEditingController();
   int counter = 0;
   ScrollController scrollController = ScrollController();
-  // List<Widget> widgets = [LoginScreen()];
   var boardController = PageController();
   bool isLastPage = false, canPressNextAndBack = true;
   bool canpop = true;
@@ -49,9 +48,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final progressBar = PrimerProgressBar(
-      segments: segments,
-      maxTotalValue: 100,
+    final progressBar = Container(
+      child: PrimerProgressBar(
+        barStyle: SegmentedBarStyle(
+          size: 10.sp,
+        ),
+        segments: segments,
+        maxTotalValue: 100,
+
+      ),
     );
 
     return PopScope(
@@ -90,20 +95,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   'create new account'.tr,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 23.sp,
+                      fontSize: 20.sp,
                       fontWeight: FontWeight.bold),
                 ),
               ),
             ]),
+            Gap(10.h),
             progressBar,
             Stack(
               children: [
                 Container(
                     width: double.infinity,
-                    height: 599.h,
+                    height: 550.h,
                     child: Step1PageScreen()),
                 Padding(
-                  padding: const EdgeInsets.only(top: 495, left: 10, right: 10),
+                  padding: const EdgeInsets.only(top: 480, left: 10, right: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -121,8 +127,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 segments.removeLast();
                                 setState(() {
                                   currentStep = 'Step 1/2'.tr;
-                                }); 
-                              }, 
+                                });
+                              },
                         label: Row(
                           children: [
                             Icon(Icons.arrow_back),
@@ -142,7 +148,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             context.pushNamed(Routes.step2PageScreen);
                             return;
                           } else {
-                            context.pushNamed(Routes.homepageScreen);
+                            context.pushNamed(Routes.step2PageScreen);
                           }
                           setState(() {
                             segments.clear();

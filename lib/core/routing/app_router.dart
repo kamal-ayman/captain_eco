@@ -3,6 +3,8 @@ import 'package:captain_eco/feauters/authorization/register/view/register_screen
 import 'package:captain_eco/feauters/authorization/register/view/step1_page_screen.dart';
 import 'package:captain_eco/feauters/authorization/register/view/step2_page_screen.dart';
 import 'package:captain_eco/feauters/home/view/home_page_screen.dart';
+import 'package:captain_eco/feauters/policy_privacy/view/policy_privacy_screen.dart';
+import 'package:captain_eco/feauters/terms_condtions/view/terms_conditions_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../utils/dependency_injection.dart';
@@ -45,6 +47,20 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (BuildContext context) {
             return Step2PageScreen();
+          },
+        );
+
+      case Routes.policyAndPrivacyScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) {
+            return PrivacyAndPolicy();
+          },
+        );
+
+      case Routes.termsAndConditionsScreen:
+        return MaterialPageRoute(
+          builder: (BuildContext context) {
+            return TermsAndConditions();
           },
         );
     }

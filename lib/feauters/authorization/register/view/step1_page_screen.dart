@@ -23,7 +23,6 @@ class _Step1PageScreenState extends State<Step1PageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(240, 255, 255, 255),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
           horizontal: 10.w,
@@ -32,7 +31,7 @@ class _Step1PageScreenState extends State<Step1PageScreen> {
         child: Column(
           children: [
             Container(
-                padding: EdgeInsets.only(right: 10.h),
+                padding: EdgeInsets.only(right: 20.h),
                 alignment: Alignment.centerRight,
                 child: Text('name'.tr,
                     style: TextStyle(

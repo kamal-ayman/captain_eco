@@ -1,5 +1,9 @@
+import 'package:captain_eco/core/helpers/extensions.dart';
+import 'package:captain_eco/core/routing/routes.dart';
 import 'package:captain_eco/core/theme/styles.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class TermsAndConditionsText extends StatelessWidget {
@@ -10,17 +14,42 @@ class TermsAndConditionsText extends StatelessWidget {
     return RichText(
         textAlign: TextAlign.center,
         text: TextSpan(
-          style: const TextStyle(height: 1.5),
+          style: const TextStyle(height: 5),
           children: [
             TextSpan(
                 text: 'by_logging_you_agree_to_our'.tr + ' ',
-                style: TextStyles.black13regular),
+                style: TextStyle(
+                  color: Colors.black,
+                )),
             TextSpan(
-                text: 'terms_and_conditions'.tr, style: TextStyles.primary13semiBold),
-            TextSpan(text: ' ' + 'and'.tr + ' ', style: TextStyles.black13regular),
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    context.pushNamed(Routes.termsAndConditionsScreen);
+                  },
+                text: 'terms_and_conditions'.tr,
+                style: TextStyle(
+                    color: Colors.blueAccent,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14.sp)),
             TextSpan(
-                text: 'privacy_policy'.tr + ' ', style: TextStyles.primary13semiBold),
+                text: ' ' + 'and'.tr + ' ',
+                style: TextStyle(
+                  color: Colors.black,
+                )),
+            TextSpan(
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    context.pushNamed(Routes.policyAndPrivacyScreen);
+                  },
+                text: 'privacy_policy'.tr + ' ',
+                style: TextStyle(
+                    color: Colors.blueAccent,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14.sp)),
           ],
         ));
   }
+
+
 }
+
