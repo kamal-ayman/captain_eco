@@ -9,7 +9,8 @@ class CustomAppBar extends StatelessWidget {
   final String pageTitle;
   Color? titleColor;
 
-  CustomAppBar({Key? key, required this.pageTitle, this.titleColor, this.canBack = true})
+  CustomAppBar(
+      {Key? key, required this.pageTitle, this.titleColor, this.canBack = true})
       : super(key: key);
 
   @override
@@ -19,29 +20,29 @@ class CustomAppBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         if (canBack)
-        InkWell(
-          borderRadius: BorderRadius.circular(2.w),
-          onTap: () => Navigator.pop(context),
-          child: Container(
-            padding: EdgeInsets.all(2.w),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(6.w),
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.shade400,
-                  offset: const Offset(0, 1.0),
-                  blurRadius: 3.0,
-                ),
-              ],
-            ),
-            child: Icon(
-              Icons.arrow_back,
-              color: Colors.grey,
-              size: 25.w,
+          InkWell(
+            borderRadius: BorderRadius.circular(2.w),
+            onTap: () => Navigator.pop(context),
+            child: Container(
+              padding: EdgeInsets.all(2.w),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6.w),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.shade400,
+                    offset: const Offset(0, 1.0),
+                    blurRadius: 3.0,
+                  ),
+                ],
+              ),
+              child: Icon(
+                Icons.arrow_back,
+                color: Colors.grey,
+                size: 21.w,
+              ),
             ),
           ),
-        ),
         CustomText(
           textAlign: TextAlign.center,
           text: pageTitle,

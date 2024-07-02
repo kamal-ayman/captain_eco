@@ -74,15 +74,15 @@ class LoginScreen extends StatelessWidget {
                       TextSpan(style: const TextStyle(height: 1.5), children: [
                     TextSpan(
                         text: 'You do not have account ?  '.tr,
-                        style: TextStyle(color: Colors.black)),
+                        style: TextStyle(color: Colors.black, fontSize: 15.sp)),
                     TextSpan(
                       text: 'Register Now'.tr,
                       style: TextStyle(
-                        color: const Color.fromARGB(255, 0, 94, 255),
-                      ),
+                          color: const Color.fromARGB(255, 0, 94, 255),
+                          fontSize: 15.sp),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          context.pushReplacementNamed(Routes.registerScreen);
+                          context.pushNamed(Routes.registerScreen);
                         },
                     ),
                   ]),
